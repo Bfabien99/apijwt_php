@@ -73,7 +73,7 @@ class Api extends Rest
 
         $cust = new Customer;
         $customers = $cust->getAllCustomers();
-        if(!is_array($customer)) {
+        if(!is_array($customers)) {
             $this->returnResponse(SUCCESS_RESPONSE, ['message' => 'Customers not found.']);
         }
 
