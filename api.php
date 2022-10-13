@@ -72,12 +72,12 @@ class Api extends Rest
     public function getAllCustomers() {
 
         $cust = new Customer;
-        $customer = $cust->getAllCustomers();
+        $customers = $cust->getAllCustomers();
         if(!is_array($customer)) {
-            $this->returnResponse(SUCCESS_RESPONSE, ['message' => 'Customer details not found.']);
+            $this->returnResponse(SUCCESS_RESPONSE, ['message' => 'Customers not found.']);
         }
 
-        $this->returnResponse(SUCCESS_RESPONSE, $customer);
+        $this->returnResponse(SUCCESS_RESPONSE, $customers);
     }
 
     public function getCustomerDetails() {
